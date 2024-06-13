@@ -1,0 +1,7 @@
+algorand.algorand_home:
+  path: '/algorand/algorand-home'
+  defaults:
+    _title: 'Algorand Home'
+    _controller: '\Drupal\algorand\Controller\AlgorandHomeController'
+  requirements:
+    _permission: 'access content'

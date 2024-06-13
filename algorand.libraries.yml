@@ -1,0 +1,5 @@
+algorand:
+  js:
+    js/algorand.js: {}
+  dependencies:
+    - core/drupal
