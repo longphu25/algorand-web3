@@ -1,7 +1,23 @@
 algorand.algorand_home:
-  path: '/algorand/algorand-home'
+  path: '/algorand/home'
   defaults:
     _title: 'Algorand Home'
     _controller: '\Drupal\algorand\Controller\AlgorandHomeController'
   requirements:
     _permission: 'access content'
+
+algorand.algo:
+  path: '/algorand'
+  defaults:
+    _controller: '\Drupal\algorand\Controller\AlgorandController::algo'
+    _title: 'Algorand Page'
+  requirements:
+    _permission: 'access content'
+
+algorand.settings_algorand:
+  path: '/admin/config/system/settings-algorand'
+  defaults:
+    _title: 'Settings algorand'
+    _form: 'Drupal\algorand\Form\SettingsAlgorandForm'
+  requirements:
+    _permission: 'administer site configuration'

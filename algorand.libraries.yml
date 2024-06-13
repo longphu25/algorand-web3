@@ -3,3 +3,13 @@ algorand:
     js/algorand.js: {}
   dependencies:
     - core/drupal
+
+algorand_app:
+  version: VERSION
+  js:
+    js/dist/main.min.js: { minified: true }
+
+algorand_app_dev:
+  version: VERSION
+  js:
+    js/dist_dev/main.min.js: { minified: true }

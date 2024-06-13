@@ -2,4 +2,4 @@ name: 'Algorand Web3'
 type: module
 description: 'Algorand Web3'
 package: 'Algorand'
-core_version_requirement: ^10
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains the Algorand module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function algorand_theme($existing, $type, $theme, $path) {
+  return [
+    'algo_page' => [
+      'template' => 'algo',
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function algorand_page_attachments_alter(array &$attachments) {
+
+  // Use the dev library if we're developing locally.
+  // if (in_array('react_example_theme/react_app', $attachments['#attached']['library']) && file_exists(__DIR__ . '/js/dist_dev')) {
+  //   $index = array_search('react_example_theme/react_app', $attachments['#attached']['library']);
+  //   $attachments['#attached']['library'][$index] = 'react_example_theme/react_app_dev';
+  // }
+
+  $attachments['#attached']['library'][] = 'algorand/algorand_app_dev';
+}
